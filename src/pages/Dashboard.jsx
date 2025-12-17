@@ -1,7 +1,7 @@
 import React from "react";
 import StatCard from "../components/StatCard/StatCard";
 import EquipmentCard from "../components/EquipmentCard/EquipmentCard";
-import { WrenchIcon } from "../components/Icons/WrenchIcon";
+import WrenchIcon from "../components/Icons/WrenchIcon";
 
 export default function Dashboard({ equipmentList, onSelectEquipment }) {
   const criticalCount = equipmentList.filter(e => e.status === 'Critical').length;
