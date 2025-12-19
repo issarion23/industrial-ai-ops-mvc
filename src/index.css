@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Базовые настройки тела документа */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Устанавливаем темный фон по умолчанию, чтобы соответствовать теме приложения */
+    background-color: #111827; /* Соответствует bg-gray-900 */
+    color: #e5e7eb; /* Соответствует text-gray-200 */
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* --- Кастомные анимации и утилиты --- */
+
+/* Используем слой utilities для корректной работы с Tailwind */
+@layer utilities {
+    .animate-fade-in {
+        animation: fadeIn 0.3s ease-out;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Стилизация скроллбара (опционально, для Chrome/Safari/Edge) --- */
+/* Делает скроллбар темным, чтобы он не выделялся на фоне интерфейса */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1f2937; /* gray-800 */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4b5563; /* gray-600 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280; /* gray-500 */
+}
